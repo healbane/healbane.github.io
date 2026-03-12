@@ -74,3 +74,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/healbane
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/OneEyedVisceral
+    - icon: fontawesome/solid/envelope
+      link: mailto:healbane@gmail.com
