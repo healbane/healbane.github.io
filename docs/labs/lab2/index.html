@@ -585,66 +585,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Реализация функций">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Создание и обработка массивов
-      
-    </span>
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Векторные операции
+        3. Визуализация
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Матричные операции
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4. Статистический анализ
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5. Визуализация
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -782,66 +732,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Реализация функций">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.1. Создание и обработка массивов
-      
-    </span>
-  </a>
-  
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Векторные операции
+        3. Визуализация
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.3. Матричные операции
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.4. Статистический анализ
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2.5. Визуализация
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -933,51 +833,55 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    └── line_plot.png
 </span></code></pre></div>
 <h3 id="2_1">2. Реализация функций</h3>
-<h4 id="21">2.1. Создание и обработка массивов</h4>
-<div class="language-text highlight"><pre><span></span><code>create_vector() – массив от 0 до 9 (np.arange(10)).
-
-create_matrix() – матрица 5×5 со случайными числами из [0,1) (np.random.rand(5,5)).
-
-reshape_vector(vec) – изменение формы (10,) → (2,5) (vec.reshape(2,5)).
-
-transpose_matrix(mat) – транспонирование (mat.T).
-</code></pre></div>
-<h4 id="22">2.2. Векторные операции</h4>
-<div class="language-text highlight"><pre><span></span><code>vector_add(a, b) – поэлементное сложение (a + b).
-
-scalar_multiply(vec, scalar) – умножение вектора на число (vec * scalar).
-
-elementwise_multiply(a, b) – поэлементное умножение (a * b).
-
-dot_product(a, b) – скалярное произведение (np.dot(a, b)).
-</code></pre></div>
-<h4 id="23">2.3. Матричные операции</h4>
-<div class="language-text highlight"><pre><span></span><code>matrix_multiply(a, b) – матричное умножение (a @ b).
-
-matrix_determinant(a) – определитель (np.linalg.det(a)).
-
-matrix_inverse(a) – обратная матрица (np.linalg.inv(a)).
-
-solve_linear_system(a, b) – решение СЛАУ Ax = b (np.linalg.solve(a, b)).
-</code></pre></div>
-<h4 id="24">2.4. Статистический анализ</h4>
-<div class="language-text highlight"><pre><span></span><code>load_dataset(path) – загрузка CSV с помощью pandas и преобразование в массив NumPy.
-
-statistical_analysis(data) – вычисление для одномерного массива:
-
-- среднее (np.mean)
-
-- медиана (np.median)
-
-- стандартное отклонение (np.std)
-
-- минимум, максимум
-
-- 25-й и 75-й перцентили (np.percentile)
-
-normalize_data(data) – Min-Max нормализация по формуле (x - min) / (max - min).
-</code></pre></div>
-<h4 id="25">2.5. Визуализация</h4>
+<table>
+<thead>
+<tr>
+<th>Группа функций</th>
+<th>Описание задачи</th>
+<th>Решение (Реализация)</th>
+<th>Нюансы</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create_vector, create_matrix, reshape_vector, transpose_matrix</td>
+<td>Создание базовых одномерных и двумерных массивов, изменение их размерности.</td>
+<td>Применение базовых методов NumPy: np.arange, np.random.rand, .reshape(), и атрибута .T для транспонирования.</td>
+<td>Метод reshape вызывает ValueError, если произведение новых размерностей не совпадает с исходным общим количеством элементов.</td>
+</tr>
+<tr>
+<td>vector_add, matrix_multiply</td>
+<td>matrix_multiply Выполнение поэлементных и матричных арифметических операций.</td>
+<td>Использование векторизованного сложения (+) и матричного умножения через оператор @ (или np.dot()).</td>
+<td>При умножении матриц число столбцов первого массива должно строго соответствовать числу строк второго, иначе возникает ошибка размерности.</td>
+</tr>
+<tr>
+<td>matrix_determinant, matrix_inverse, solve_linear_system</td>
+<td>Решение алгебраических задач с квадратными матрицами.</td>
+<td>Использование функций из модуля np.linalg: det(), inv(), solve().</td>
+<td>Операции выполнимы только для квадратных невырожденных матриц (где определитель не равен нулю). При расчете детерминанта возникают погрешности вычислений с плавающей точкой.</td>
+</tr>
+<tr>
+<td>load_dataset</td>
+<td>Загрузка данных об успеваемости из файла students_scores.csv.</td>
+<td>Чтение файла с помощью pandas.read_csv() с последующей конвертацией в массив NumPy методом to_numpy().</td>
+<td>При загрузке необходимо корректно обрабатывать строку заголовков и гарантировать, что все текстовые данные преобразованы в числовые форматы.</td>
+</tr>
+<tr>
+<td>statistical_analysis, normalize_data</td>
+<td>Расчет базовых статистических метрик выборки и масштабирование значений в диапазон [0, 1].</td>
+<td>Вызовы np.mean(), np.min(), np.max(), np.percentile(). Нормализация реализована по алгоритму Min-Max.</td>
+<td>Деление целочисленных массивов при нормализации без явного приведения к float приводит к отбрасыванию дробной части и полной потере точности (все значения становятся 0 или 1).</td>
+</tr>
+<tr>
+<td>plot_histogram, plot_heatmap, plot_line</td>
+<td>Графическое представление данных: частота оценок, корреляция дисциплин и успеваемость.</td>
+<td>Построение графиков с помощью matplotlib.pyplot (hist, plot) и seaborn (heatmap).</td>
+<td>Запуск визуализации в средах без графического интерфейса (например, при запуске pytest) вызывает исключение _tkinter.TclError. Это обходится принудительной инициализацией неинтерактивного бэкенда через matplotlib.use('Agg').</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3">3. Визуализация</h3>
 <p>Все графики сохраняются в папку plots с разрешением 300 dpi.</p>
 <p>Гистограмма (plot_histogram)</p>
 <p>Построена для оценок по математике. Использовано 5 интервалов (bins), цвет столбцов – небесно-голубой с чёрной окантовкой. Добавлены заголовок, подписи осей и сетка.</p>
